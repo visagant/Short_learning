@@ -1,0 +1,214 @@
+What is Hadoop?
+An open source framework for processing BIG-DATA.
+	• Has lot of software utilities.
+	• Can process data across clusters of computers (1000s of machines)
+How Hadoop started?
+	• In 1990s, developed by Google engineers to index web pages and search for pages.
+		○ Google created below two important parts.
+			§ Distributed file system (Google File system)
+			§ MapReduce
+How open source Hadoop came.?
+	• In 2006, yahoo named it as Hadoop and open-sourced It under apache license
+	
+Current status?
+	 Used in many areas like banks, retail business, govt organizations etc..
+	
+Hadoop distributed file system (HDFS):
+Data is distributed across multiple nodes in the cluster. If a file is too big HDFS will write the file across multiple nodes.  Each block is typically 128MB.
+
+Yet  Another Resource Negotiator (YARN):
+As data is distributed across multiple nodes, processing is also done in multiple nodes. Thus leveraging the CPU power of nodes. This is managed by YARN.
+
+High Availability (Failure Tolerance):
+Our data has multiple copies on other nodes. So, when a node fails, the processing framework is aware of location where the other copy can be found.
+
+===============================
+
+Hadoop Framework:
+	• Hadoop common
+		○ software packages that are needed for other hadoop modules.
+	• HDFS
+		○ Distributed storage
+	• YARN
+		○ resource manager. To schedule computing across clusters.
+	• Hadoop Mapreduce
+		○ Programming model.
+
+HDFS:
+Local Machine(laptop) ---> Edge Node  -->  Name node -> { Data Node 1, Data node 2 }
+
+	• Edge Node: it connects Hadoop network to outside. It sometimes runs HDFS client.
+	• Name node: Contains a tree of files that are there in the file system, It doesn’t store any data.
+	• Data node: It has disks attached to it. contains data.
+
+YARN:
+Yarn was introduced in Hadoop 2. 
+YARN separates programming model from resource management infrastructure.
+	• Resource Manager: It is installed in Name node. It will take care that all the nodes capabilities are used to provide faster access to data queries.
+	• Node Manager: It is installed in all the Data nodes. It will report the CPU, memory, disk stats to resource manager.
+		○ Containers: Tasks are run here.
+		○ Application master: This will negotiate with resource manager for the CPU/memory needed by containers 
+
+MapReduce:
+Input data --> MapReduce -> {Key,Value}
+e.g:{ URL, no of pages }, {movie, rating}, {word, word_count}
+
+Map -> shuffle -> reduce
+
+	• map process: Will divide it into key, value pairs
+	• shuffle process: will group the data from map.
+	• reduce process : The data will be aggregated and will be sent to HDFS
+
+==========================================
+
+Hadoop distributions:
+Hadoop is open source software.
+companies will tweek this and add their tools that and make easy installation and will provide solutions to their clients.
+
+CloudEra: 
+	• Established in 2008 by ex-employees of google, facebook, oracle, yahoo,
+	• The distrubution name is CDH
+MapR:
+	• Founded in 2009. 
+	• Instead of HDFS, It used MapR-FS.
+	• It creates other products which will fit into its own hadoop ecosystem called Converged Data platform.
+HortonWorks:
+	• Formed in 2011.
+	• The distribution name is HDP.
+Amazon Elastic MapReduce: (EMR)
+	• Cloud based hadoop framework.
+Microsoft Azure:
+	• Product name is HDInsight.
+	• Runs in azure cloud.
+Google:
+	• Product name is  Google Cloud Dataproc.
+	• Runs in google cloud platform.
+OpenStack:
+	• Product name is Sahara
+
+=============================================
+
+Importing data into hadoop:
+To import data into hadoop you have convert local files to HDFS files.
+Various data import, ingest, steraming tools are available.
+
+Hadoop CLI:
+create directory: 	hdfs dfs -mkdir <dir_name>
+copy from local to hadoop:	 hdfs dfs -copyFromLocal <source> <dest>
+copy from hadoop to local: 	hdfs dfs s -copyToLocal <source> <dest>
+Move from local to hadoop:	hdfs dfs -mv <source> <dest>
+
+
+Apache SQOOP:
+	• Created by cloudera. It helps loading data from RDBMS to hadoop. The name is blend of SQl and hadOOP.
+	• Sqoop Jobs can be scheduled using Oozie, a hadoop workflow engine.
+Apache Flume:
+	• used to move large amounts of log data into and out of Hadoop.
+	• Flume is based on "Source-Channel-Sink" architecture.
+Apache Kafka:
+	• It is a publish-subscribe messaging system that transfers data between applications.
+	• Kafka is highly scalable and expnanded dynamically, without downtime.
+	• It is popular choice for handling high velocity data streams such as data from social media.
+distcp (Distribued Copy):
+	• It is a hadoop program that copies data to/from a hadoop cluster to another.
+	• It also supports copying from non-hadoop systems like Amazon s3, cassondra, or our local File system.
+
+===================================================
+Hadoop distributed processing tools: (Data exploration and analytical tools)
+
+Java: Initially, hadoop analysis was done in MapReduce, with jobs coded in java.
+
+Data exploration tools:
+------------------------------
+	• SQL-Compatible
+		○ Apache Hive
+		○ Tez
+		○ Pheonix
+		○ Impala
+	• NoSQL
+		○ Apache Hbase
+		○ Apache Cassandra
+		○ Redis
+		○ MongoDB
+		○ neo4j
+	• Hybrid (both sql and nonsql)
+		○ presto
+
+Apache Pig:
+	•  A scripting language on top of mapreduce.
+	• Creates MapReduce jobs using HDFS files.
+	• Developed by yahoo.
+Apache Hive:
+	• It is an interface to analyze data in hadoop using SQL rather than MapReduce(which is in java)
+	• uses HiveQL, which is similar to SQL.
+	• Developed by Facebook
+Apache TeZ:
+	• Optimizes Pig and Hive, and runs faster than MapReduce.
+	• Can scale even petabytes of data.
+	• Developed by HortonWorks.
+Apache Impala:
+	• It is an ANSI SQL exectuion engine.
+	• Developed by cloudera.
+Apache Hbase:
+	• It is modelledd after Google's BigTable.
+	• It is a schema-less. but support SQL and shcema using apache Phoenix on top of Hbase.
+Apache Cassandra:
+	• Opensourced by Facebook in 2008.
+	• It is based on Google Bigtable "partioned row store".
+	• Partiioned using amazon dynamo model
+Apache CouchDB:
+	• Uses JSON to store data, javascript as its query language using mapreduce.
+MongoDB:
+	• JSON-like document oriented database.
+Apache Phoenix:
+	• Invented by salesforce.com. opensource project.
+	• Usses SQL and NoSQL data.
+	• connects throguh JDBC APIs
+Presto:
+	• It is not a database. it does not store any data.
+	• It is a SQL query engine and processing engine.
+	Some points
+		○ Facebook created presto for a faster tool than hive.
+		○ It is a opensource. Teradata actively contribute for presto connectors to teradata.
+==========================================================
+Machine learning tools
+
+Spark:
+	• spark is a in-memory framework designed for machine-learning algorithms.
+	• In some cases spark is even faster than map-reduce.
+R:
+	• R is a software environment for statistical computation and visualization.
+Samza:
+	• Apache samza is fault tolerant, stateful, stream-only processing system.
+	• Developed and heavily used by LinkedIN.
+Apache-Storm:
+	• It is a real time stream only service.
+	• Acquired by twitter.
+Apache-Flink:
+	• It is also a good framework comparable to spark.
+
+==========================================================
+Hadoop utilities
+
+Oozie:
+	• It is best at building repeatable production workflows of hadoop jobs.
+Elastisearch, Apache Solr:
+	• Opensource, search engines
+Zookeeper:
+	• ZooKeeper provides configuration information, naming registry, distributed synchronization, and group services for the cluster. 
+	For example, ZooKeeper handles the failover of master services (NameNode for HDFS and ResourceManager for YARN) and others.
+Apache nifi:
+	• Nifi (the name is short for "Niagara Files") manages data flows and automates data ingestion between disparate systems. 
+
+==========================================================
+Security
+
+Kerberos is an enterprise-grade authentication protocol widely used by open source and commercial products. 
+Hadoop distributions that support Kerberos authentication include Cloudera (CDH), Hortonworks (HDP), MapR, and Amazon EMR, among others.
+Some Hadoop distributions may provide alternatives to Kerberos. For example, MapR also provides a native authentication using Linux Pluggable Authentication Modules (PAM).
+
+Apache Sentry:
+	• Supported by cloudera and mapR.
+Apache Knox:
+Apache Ranger:
+	• Supported by HortonWorks
