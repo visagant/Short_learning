@@ -1,0 +1,284 @@
+AI - Artificial Intelligence
+	• ANI - Artificial Narrow Intelligence
+	e.g: self driving car, web search, smart speaker
+	• AGI - Artificial General Intelligence
+	e.g: thinking like human
+
+Note: ANI is growing rapidly. But AGI is not. So, Skynet or matrix  machines are way to go!!
+
+==========
+
+Machine learning:
+	• Supervised learning
+	You give input and the AI-ML application will give output.
+	e.g:
+	spam filter :: mail->spam/not spam
+	ad bot :: ad -> will user click/not
+	• Unsupervised learning
+
+You have a set of parameters for each login..
+e.g: user details {place, age, sex, previous order, previous product view, how much time they viewed product}
+       We may have a huge num of sets like this. When a question is asked "What will be our customer's next product?".  
+       Our AI bot must be smart enough to predict it.
+
+======
+
+Data:
+	• Don’t wait for Data. Start with whatever data you have. with continuous AI feeding, you can get advice/feedback on what type of data to collect
+	• Not all Data is good/valuable.
+	• Data is messy. You must clean data before feeding it to AI.
+
+========
+
+Terminology:
+	• Machine Learning:
+	Def: machine learning is the field of study that gives computers the ability to learn without being explicitly programmed
+	• Data science:
+	Def: The science of extracting knowledge and insights from data
+	• Deep Learning
+	Def: From a diverse set of data extracting the output.
+				Input -> Neural network -> output
+	e.g: {size, # of bedrooms, # of bathrooms, age of property} -> Neural network -> price of property.
+	• Artificial Neural Network
+	Def: A very affective technique to get B(output) from A(input)
+
+========
+
+What is a AI company?
+
+How to embrace AI?
+		○ You will be become a AI company iff your business will grow if you integrate AI into your work flow.
+How to transform to AI?
+		1) Execute pilot projects to gain momentum
+		2) Build an in house AI team
+		3) Provide broad AI training
+		4) Develop a AI strategy
+		5) Develop internal and external communications.
+
+Further reading: https://landing.ai/ai-transformation-playbook/
+
+===========
+
+What ML can do?
+	• It can classify your emails as [general, promotions, financial]
+What ML cannot do?
+	• It cannot reply to a person on its own.
+
+============
+
+Work flow of machine learning project:
+             collect data -> Train model -> Deploy model
+
+Work flow of data science project:
+	Collect data -> Analyze data -> Suggest hypothesis/action
+	
+=====================
+Data science	Machine Learning
+Analyze your interview process. which stage needs improvement	Screen resumes for best candidates
+Which color theme must website use?	Which product advertisement to show for customer?
+Which crop to be planted?	Find out weeds from plants precisely.
+==============
+
+What jobs can AI take?
+	• Customer care executor on website.
+
+==============
+
+Case study I : Playing music on Alexa:
+Step 1: Trigger work/wake word. E.g: Hey Alex
+Step 2: Speech recognition. e.g: Tell me something funny
+step 3: Intent recognition. e.g: [joke, weather, route, music, call] Finding outwhat does user want?
+step 4: execute joke 
+
+Case study 2: Self driving vehicle:
+Image radar/Lidar: Take pictures of surroundings and detect vehicles/people.
+Motion planning: figure out the path to go. e.g: to take a left turn
+
+step 1: car detection, car prediction
+step 2: pedestal detection, pedestal detection
+.
+.
+Other steps may include signal detection, animal detection, zebra crossing detection etc..
+.
+.
+step 3: motion planning.
+
+================
+07-Mar-19 9:00 AM 
+Roles in AI team:
+Software engineer: 	Who write code for Alexa app.
+Machine learning engineer: 	Who writes code for ML models.
+Machine learning researcher:	 Who does R&D on new technologies in AI and ML
+Applied ML scientist: 	who can take research points and finds out how we can use in our projects. Sits between ML engineer and ML researcher
+Data Scientist:	Provides insights, make presentations to team/executives.
+Data engineer:	Who organizes data. e.g: Hadoop engineer
+AI product manager:	Finds out what project to start for business.
+
+===============
+
+AI Transformation Playbook
+	1. Execute pilot projects to gain momentum
+		You will not see any business profit immediately. you need to keep some trust and keep learning/working.
+	2. Build an in house AI team
+		You must create a new vertical which will only work on AI. Once it learns fully and is independent. These team members must go to other Business units(BI) and apply their ideas and teach those BI engineers/manager about AI.
+	3. Provide broad AI training
+		 Managers, engineers, leads everyone must be trained. Lot of content is available online. COO must curate the important tutorials, websites etc. for team members.
+	4. Develop a AI strategy
+		Start running your models with as little data as you.
+		Collect/acquire data.
+	5. Develop internal and external communications.
+		Make good communication with Investors and govt on how you are using AI and avoiding problems.
+		recruite talented engineers.
+
+Pitfalls:
+	1. Don’t expect that AI will solve anything.
+	2. Don’t hire too less ML engineers.
+	3. Don’t expect profit/work very soon.
+	4. Don’t expect that traditional project planning will work for AI project e.g: KPIs, milestones etc..
+	5. Don’t think that only AI experts can be useful for you team. Normal ML engineers will also work and create use cases with rigorous AI work.
+
+======================
+
+Steps for jumping into AI
+
+	1. Learn AI
+		• enroll AI courses.
+	2. Brainstorm on new projects
+		• Make friend  group and work on a small AI/ML project.
+	3. Hire ML/AI engineers
+	4. Hire a AI leader
+	5. Discuss with board members about AI usage in business
+
+========================
+
+AI application areas:
+
+	• Image classification:
+		• face recognition: unlock your phone, group your photos.
+		• Object recognition: finding cars/objects for a self-driving car.
+		• Image segmentation: draw a rectangle border on an object/person in an image.
+		• tracking Algorithm: track a moving object/person in a live/recorded video.
+	• Natural language processing (NLP):
+		• Text classification: sentiment recognition.
+		• Information retrieval
+		• Name entity retrieval: Find the person name, dish name in a review.
+		• machine translation: translate from Japanese to English.
+		• Others: parts of speech tagging, parsing.
+	• Speech recognition
+		• speech to text
+		• trigger word detection
+		• identify user by creating speaker ID.
+		• text to speech.
+	• Robotics: 
+		• Perception:  Where is the car
+		• Motion planning: What must it do? do it have to turn, brake etc..
+		• control: How much pressure to keep on pedal.
+	• General machine learning:
+		• structured data
+		• unstructured data
+
+==========================
+
+AI techniques:
+
+Unsupervised learning:
+	• clustering of data.
+Transfer Learning:
+	• Use previous learning and jump start identifying new objects based on past learning.
+Reinforcement learning:
+	• Uses a reward signal. e.g: give +ve number when it works good, -ve when It doesn’t work good.
+Deep Knowledge Graph:
+	• create data base from various resources around web.
+
+====================
+
+Realistic view of AI:
+	• Too optimistic: 
+	Don’t be too optimistic. AI cannot evolve to sentiment robots.
+	• Too pessimistic:
+	Don’t be too pessimist. Ai can do somethings. It's not out of our scope.
+	• Just right:
+	Know what to expect what not to expect from AI.
+	
+Limitations:
+	• Performance limitations: It cannot act as a front end associate. it cannot understand the feeling of visitors and act accordingly.
+	• Explainability is hard: AI cannot explain things very correctly. you cannot purely rely on AI analysis.
+	• Biased AI: AI can bias on people based on its research.
+	• Adversarial attacks on AI
+
+====================
+
+Discrimination bias:
+
+AI learns from data in internet and may group data in a way that data projects.
+		Man: Father; women: ??  	Mother
+		man: women ; King:??	Queen
+		Man: computer programmer; women: ??	Home maker
+		AI doesn’t know that Women can also be a computer programmer. based on data it has a man who is a computer programmer may have a women mapping to him who is a home maker.
+
+Why bias matters?
+	• AI should not bias on men when selecting resumes.
+	• AI should not work better with only fair skin people.
+	• AI should not bias on whom to give loans.
+	• AI should not go stereotypical. 
+
+How to combat bias?
+	• Technical solutions : use less biased data.
+	• Transparency and auditing process : Human intervention during running models to check if bias is happening.
+	• Diversifying workforce : Hire people divisively.
+
+=================
+
+Adversarial attacks:
+	• Minor perturbation: 
+		Add noise to a photo of a humming bird and AI may say that it is a hammer
+		Add noise to a photo of a hare and AI may say that it is a desk
+	• Physical attack:
+		Add a pair of glasses and your AI may think that you are a famous hero.
+		Add some stickers on STOP sign and AI may think that it is a billboard.
+		Put a sticker near banana and AI may think that it is a slug
+	
+How to handle these attacks?
+	• Some defenses are there but it is costly.
+
+=================
+
+Adverse use cases:
+	• Deep Fakes
+	• Generate fake comments
+	
+=================
+
+AI and society:
+	• developing companies can jump start rather than stepping.
+	e.g: A nation which doesn’t have 3G can jump start with 4G.
+	       A nation which doesn’t use debit card payments can jump start to 4G.
+	       A nation which doesn’t have quality schools can jump start to online education.
+	• Focus on AI to strengthen companies vertical industries.
+	• Enabling public-private partnerships to accelerate development.
+	• Invest in education.
+
+==================
+
+AI and jobs:
+	AI is automation on steroids.
+McKinsey Global institute	
+Jobs displaced by 2030	: 400-800 million
+Jobs created by 2030	: 555-890 million
+
+Which jobs will go? repetitive, routine.
+Which jobs will retain?  not repetitive, social interaction needed
+
+Precautions to take:
+	• govt has to encourage learning AI.
+	• Everyone has to stick to Lifelong learning.
+
+How to shift your career to AI:
+	• Jump from your work to AI: You stops you work and then jump into a AI job.
+	• Slowly migrate to AI: Apply AI solutions in your work and build and extensive AI around the routine work you do. Thus slowly migrating to AI. this is recommended.
+===================
+
+Notes from coursera course:
+title : AI For Everyone
+Instructor:  Andrew NG
+Link : https://www.coursera.org/learn/ai-for-everyone/
